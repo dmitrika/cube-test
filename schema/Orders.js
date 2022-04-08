@@ -12,6 +12,7 @@ cube(`Orders`, {
     `,
     
     // Webhooks should work :)
+    // And from editor to repo too
   
     preAggregations: {
       // Pre-Aggregations definitions go here
