@@ -10,6 +10,8 @@ cube(`Orders`, {
     UNION ALL
     select 5 as id, 600 as amount, 'shipped' status
     `,
+    
+    // Webhooks should work :)
   
     preAggregations: {
       // Pre-Aggregations definitions go here
