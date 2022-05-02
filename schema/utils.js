@@ -1,3 +1,5 @@
+export const capitalize = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+
 cube(`Orders`, {
     sql: `
     select 1 as id, 101 as amount, 'new' status
@@ -10,9 +12,6 @@ cube(`Orders`, {
     UNION ALL
     select 5 as id, 600 as amount, 'shipped' status
     `,
-    
-    // Webhooks should work :)
-    // And from editor to repo too
   
     preAggregations: {
       // Pre-Aggregations definitions go here
@@ -21,7 +20,8 @@ cube(`Orders`, {
   
     measures: {
       count: {
-        type: `count`
+        type: `count`,
+        title: capitalize('all we got'),
       },
   
       totalAmount: {
