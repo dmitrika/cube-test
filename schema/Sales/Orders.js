@@ -1,5 +1,3 @@
-import {capitalize} from '../utils'
-
 cube(`Orders`, {
     sql: `
     select 1 as id, 101 as amount, 'new' status
@@ -23,7 +21,7 @@ cube(`Orders`, {
     measures: {
       count: {
         type: `count`,
-        title: capitalize('all we got'),
+        title: 'all we got',
       },
   
       totalAmount: {
